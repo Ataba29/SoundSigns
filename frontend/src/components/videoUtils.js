@@ -31,16 +31,16 @@ export const getVideoSource = (item) => {
 
   // Check if it's a number
   if (type === "number" || /^\d+$/.test(text)) {
-    return `/assets/videos/numbers/${text}.mp4`;
+    return `/videos/numbers/${text}.mp4`;
   }
 
   // Check if it's a single letter
   if (type === "letter" || (text.length === 1 && /^[a-zA-Z]$/.test(text))) {
-    return `/assets/videos/letters/${text.toLowerCase()}.mp4`;
+    return `/videos/letters/${text.toLowerCase()}.mp4`;
   }
 
   // Otherwise, it's a word
-  return `/assets/videos/words/${text.toLowerCase()}.mp4`;
+  return `/videos/words/${text.toLowerCase()}.mp4`;
 };
 
 // Process ISL translation into words/letters with pre-checking
