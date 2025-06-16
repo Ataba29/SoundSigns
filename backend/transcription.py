@@ -21,7 +21,7 @@ load_dotenv()
 
 # Initialize OpenAI client
 api_key = os.getenv("OPENAI_API_KEY")
-client = OpenAI(api_key=api_key)
+client = OpenAI()
 
 
 def text_to_isl_gloss(text):

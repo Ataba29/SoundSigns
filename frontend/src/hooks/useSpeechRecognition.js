@@ -1,4 +1,9 @@
-import { useState, useRef } from 'react';
+import { useState, useRef } from "react";
+
+// Environment-based API configuration
+const API_BASE_URL = import.meta.env.PROD
+  ? "https://soundsigns.onrender.com" // Replace with your actual backend URL
+  : "http://localhost:5000";
 
 export const useSpeechRecognition = () => {
   const [transcript, setTranscript] = useState("");
@@ -8,7 +13,6 @@ export const useSpeechRecognition = () => {
   const recognitionRef = useRef(null);
   const finalTranscriptRef = useRef("");
 
-  
   const startRecording = () => {
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -70,7 +74,8 @@ export const useSpeechRecognition = () => {
         setIsProcessing(true);
 
         try {
-          const response = await fetch("http://localhost:5000/translate", {
+          // Use environment-based URL
+          const response = await fetch(`${API_BASE_URL}/translate`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -118,6 +123,6 @@ export const useSpeechRecognition = () => {
     isProcessing,
     toggleRecording,
     startRecording,
-    stopRecording
+    stopRecording,
   };
 };
