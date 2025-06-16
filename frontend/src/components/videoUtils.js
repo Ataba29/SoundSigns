@@ -36,13 +36,15 @@ export const getVideoSource = (item) => {
 
   // Check if it's a single letter
   if (type === "letter" || (text.length === 1 && /^[a-zA-Z]$/.test(text))) {
-    return `/videos/letters/${text.toLowerCase()}.mp4`;
+    // Convert to uppercase to match filename
+    return `/videos/letters/${text.toUpperCase()}.mp4`;
   }
 
-  // Otherwise, it's a word
-  return `/videos/words/${text.toLowerCase()}.mp4`;
+  // For words: capitalize first letter
+  const capitalizedWord =
+    text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+  return `/videos/words/${capitalizedWord}.mp4`;
 };
-
 // Process ISL translation into words/letters with pre-checking
 export const processISLTranslation = async (translation) => {
   if (!translation) return [];
