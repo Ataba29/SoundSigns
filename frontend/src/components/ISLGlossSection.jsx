@@ -2,8 +2,8 @@ import InfoTooltip from "./InfoTooltip";
 
 const ISLGlossSection = ({ isl }) => {
   return (
-    <div className="bg-white/80 dark:bg-slate-600/80 backdrop-blur-xl rounded-2xl border border-white/30 dark:border-slate-700/30 shadow-xl p-6 transition-colors duration-300">
-      <div className="flex items-center justify-between mb-4">
+    <div className="bg-white/80 dark:bg-slate-600/80 backdrop-blur-xl rounded-2xl border border-white/30 dark:border-slate-700/30 shadow-xl p-6 transition-colors duration-300 h-full flex flex-col">
+      <div className="flex items-center justify-between mb-4 flex-shrink-0">
         <div className="flex items-center space-x-3">
           <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-indigo-500 rounded-xl flex items-center justify-center">
             <svg
@@ -26,7 +26,7 @@ const ISLGlossSection = ({ isl }) => {
         </div>
         <InfoTooltip content="ISL Gloss is a written notation system for International Sign Language. It represents the structure and grammar of sign language in text form, showing the sequence of signs that would be performed. This is the intermediate step before video translation." />
       </div>
-      <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-lg p-6 min-h-[220px] border border-blue-200/50 dark:border-blue-700/50 shadow-inner transition-colors duration-300">
+      <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-lg p-6 border border-blue-200/50 dark:border-blue-700/50 shadow-inner transition-colors duration-300 flex-1 min-h-0 overflow-auto">
         <p className="text-blue-800 dark:text-blue-200 font-mono text-sm leading-relaxed whitespace-pre-wrap font-medium transition-colors duration-300">
           {isl || (
             <span className="text-slate-500 dark:text-slate-400 italic flex items-center space-x-3 font-sans transition-colors duration-300">

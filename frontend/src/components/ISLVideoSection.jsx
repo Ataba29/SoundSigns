@@ -4,9 +4,9 @@ import InfoTooltip from "./InfoTooltip";
 
 const ISLVideoSection = ({ isl, transcript }) => {
   return (
-    <div className="bg-white/80 dark:bg-slate-600/80 backdrop-blur-xl rounded-2xl border border-white/30 dark:border-slate-700/30 shadow-xl p-6 transition-colors duration-300">
-      <div className="text-center mb-6">
-        <div className="flex items-center justify-between mb-3">
+    <div className="bg-white/80 dark:bg-slate-600/80 backdrop-blur-xl rounded-2xl border border-white/30 dark:border-slate-700/30 shadow-xl p-1 transition-colors duration-300 h-full flex flex-col">
+      <div className="text-center mb-2 flex-shrink-0">
+        <div className="flex items-center justify-between mb-0">
           <div className="flex items-center justify-center space-x-3 flex-1">
             <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
               <svg
@@ -23,7 +23,7 @@ const ISLVideoSection = ({ isl, transcript }) => {
                 />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 dark:from-emerald-300 dark:to-teal-300 bg-clip-text text-transparent transition-colors duration-300">
+            <h2 className="text-xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 dark:from-emerald-300 dark:to-teal-300 bg-clip-text text-transparent transition-colors duration-300">
               ISL Video Translation
             </h2>
           </div>
@@ -34,7 +34,7 @@ const ISLVideoSection = ({ isl, transcript }) => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-6 border border-slate-200/50 dark:border-slate-700/50 shadow-inner min-h-[520px] transition-colors duration-300">
+      <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-2 border border-slate-200/50 dark:border-slate-700/50 shadow-inner flex-1 min-h-0 transition-colors duration-300 flex items-center justify-center">
         <ISLVideoPlayer islTranslation={isl} liveTranscription={transcript} />
       </div>
     </div>
