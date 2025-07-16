@@ -48,7 +48,7 @@ OPENAI_API_KEY=your_openai_key_here
 
 ### Frontend Setup
 
-1. Navigate to frontend directory and install dependencies:
+1. Navigate to the frontend directory and install dependencies:
 ```bash
 cd frontend
 npm install
@@ -112,14 +112,17 @@ project-root/
 ## Known Limitations
 
 - Limited vocabulary dataset (~150 signs)
-- Words not in dataset are finger-spelled letter by letter
+- Words not in the dataset are finger-spelled letter by letter
 - Translation accuracy depends on ChatGPT's ISL gloss generation
-- Requires quiet environment for optimal speech recognition
-- System latency of 3-5 seconds for complete translation process
+- Requires a quiet environment for optimal speech recognition
+- System latency of 3-5 seconds for the complete translation process
 
 ## Contributing
 
-This project was developed as a capstone project by Ahmad Ataba and Waseem Saleem under the supervision of Dr. Reuven Cohen at Braude College.
+This project was developed as a completed academic capstone project and is no longer under active development.  
+At this time, we are **not accepting contributions or pull requests**.
+
+Thank you for your interest and understanding.
 
 ## Dataset Attribution
 
@@ -127,7 +130,15 @@ The sign language video dataset is sourced from the open-source "Text-Speech to 
 
 ## License
 
-This project uses open-source components and datasets. Please refer to individual component licenses for specific terms.
+This project is the intellectual property of **Ahmad Ataba**, **Waseem Saleem**, and **Braude Engineering College**.  
+It was developed as a capstone project for academic purposes.  
+All rights reserved. Redistribution or commercial use is not permitted without explicit permission from the authors or the institution.
+
+## Our Team
+
+- **[Ahmad Ataba](https://www.linkedin.com/in/ahmadataba/)**
+- **[Waseem Saleem](https://www.waseemsaleem.com/)**
+
 
 ## Support
 
